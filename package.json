@@ -1,0 +1,33 @@
+{
+  "name": "rclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" \"npm run hardhat\"",
+    "server": "node server/server.js",
+    "client": "cd client && npm start",
+    "hardhat": "npx hardhat node",
+    "clean": "taskkill /IM node.exe /F || pkill -f node || echo 'No processes to kill'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "axios": "^1.7.9",
+    "chalk": "^4.1.2",
+    "chokidar": "^4.0.3",
+    "concurrently": "^9.1.2",
+    "ethers": "^5.7.2",
+    "express": "^4.21.2",
+    "glob": "^11.0.1",
+    "hardhat": "^2.22.18",
+    "idb": "^8.0.2",
+    "rclone": "file:",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1",
+    "solc": "^0.8.28"
+  }
+}
